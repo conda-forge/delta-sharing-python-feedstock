@@ -10,7 +10,7 @@ WIN = platform.system() == "Windows"
 if WIN:
     COV_THRESHOLD = 50
 else:
-    COV_THRESHOLD = 65
+    COV_THRESHOLD = 64
 
 for tst in TESTS.rglob("*.py"):
     tst.write_text(tst.read_text().replace("delta_sharing.tests.", "."))
