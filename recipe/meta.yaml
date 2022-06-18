@@ -1,4 +1,4 @@
-{% set version = "0.4.0" %}
+{% set version = "0.5.0" %}
 
 package:
   name: delta-sharing-python
@@ -7,10 +7,10 @@ package:
 source:
   - folder: dist
     url: https://pypi.io/packages/source/d/delta-sharing/delta-sharing-{{ version }}.tar.gz
-    sha256: 437e8ac0a3fe2a1e4293ff0096d8a9038ba57b0155576c2fc291da03986ffb85
+    sha256: 03afd0fc61d125e930eef735b5c3dfdcddcc74b1164e0235a18e4859ce2b0d85
   - folder: src
     url: https://github.com/delta-io/delta-sharing/archive/refs/tags/v{{ version }}.tar.gz
-    sha256: 87e46e6b410c6abceb46137110eb3871a7986dc40cf5c4bf14464a01b3a3c8fc
+    sha256: 548863728666c9657890742d7902a5c7ec5be1e550c7b9bf064f7ae502f42b44
 
 build:
   number: 0
@@ -20,14 +20,14 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6,<3.10
+    - python >=3.7
   run:
     - aiohttp
     - dataclasses  # this is a no-op on py3.8+
     - fsspec >=0.7.4
     - pandas
     - pyarrow >=4.0.0
-    - python >=3.6,<3.10
+    - python >=3.7
     - requests
     - yarl >=1.6.0
 
