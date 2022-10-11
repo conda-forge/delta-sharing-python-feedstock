@@ -1,4 +1,4 @@
-{% set version = "0.5.1" %}
+{% set version = "0.5.2" %}
 
 package:
   name: delta-sharing-python
@@ -7,10 +7,10 @@ package:
 source:
   - folder: dist
     url: https://pypi.io/packages/source/d/delta-sharing/delta-sharing-{{ version }}.tar.gz
-    sha256: ccb450391c8d1d4856ed8f8153b63758d0e3ea09ba158b2df2b4bf8c3664b6c0
+    sha256: 478ccd42c7519d35ed84b0247924cc83d2371106370b0b9d7a048137011dc40e
   - folder: src
     url: https://github.com/delta-io/delta-sharing/archive/refs/tags/v{{ version }}.tar.gz
-    sha256: fd167804b85488c6acbf3b8966483279f29cc946d565defa9689dd18bf617f78
+    sha256: be8b92395b21275c4a020ed5eb7d232cf15ee7bd06e589f43eb1f07142f2c18a
 
 build:
   number: 0
