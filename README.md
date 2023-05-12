@@ -1,11 +1,11 @@
-About delta-sharing-python
-==========================
+About delta-sharing-python-feedstock
+====================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/delta-sharing-python-feedstock/blob/main/LICENSE.txt)
 
 Home: https://delta.io/sharing
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/delta-sharing-python-feedstock/blob/main/LICENSE.txt)
 
 Summary: Python Connector for Delta Sharing
 
