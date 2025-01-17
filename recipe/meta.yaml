@@ -15,15 +15,17 @@ source:
 build:
   number: 1
   noarch: python
-  script: cd dist && {{ PYTHON }} -m pip install . -vv
+  script:
+    - cd dist 
+    - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
 
 requirements:
   host:
     - pip
     - python {{ python_min }}
+    - setuptools
   run:
     - aiohttp
-    - dataclasses  # this is a no-op on py3.8+
     - fsspec >=0.7.4
     - numpy
     - pandas
@@ -35,14 +37,14 @@ requirements:
 test:
   source_files:
     - src/python/delta_sharing/tests
-  imports:
-    - delta_sharing
-  commands:
-    - pip check
   requires:
     - pip
     - pytest-cov
     - python {{ python_min }}
+  imports:
+    - delta_sharing
+  commands:
+    - pip check
 
 about:
   home: https://delta.io/sharing
