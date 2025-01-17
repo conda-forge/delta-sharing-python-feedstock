@@ -6,42 +6,45 @@ package:
 
 source:
   - folder: dist
-    url: https://pypi.io/packages/source/d/delta-sharing/delta-sharing-{{ version }}.tar.gz
+    url: https://pypi.org/packages/source/d/delta-sharing/delta-sharing-{{ version }}.tar.gz
     sha256: 4141def6951fb0c3350b6c913fd3068b639ed7a978e9f9bc7328b6e25d25cc33
   - folder: src
     url: https://github.com/delta-io/delta-sharing/archive/refs/tags/v{{ version }}.tar.gz
     sha256: abd7806b8a7edd2ce7e58f1a3ba27fd0cd606259f18196ceafe4775bebc48b1e
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: cd dist && {{ PYTHON }} -m pip install . -vv
+  script:
+    - cd dist 
+    - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
+    - setuptools
   run:
     - aiohttp
-    - dataclasses  # this is a no-op on py3.8+
     - fsspec >=0.7.4
     - numpy
     - pandas
     - pyarrow >=4.0.0
-    - python >=3.7
+    - python >={{ python_min }}
     - requests
     - yarl >=1.6.0
 
 test:
   source_files:
     - src/python/delta_sharing/tests
+  requires:
+    - pip
+    - pytest-cov
+    - python {{ python_min }}
   imports:
     - delta_sharing
   commands:
     - pip check
-  requires:
-    - pip
-    - pytest-cov
 
 about:
   home: https://delta.io/sharing
