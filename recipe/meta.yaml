@@ -1,4 +1,4 @@
-{% set version = "1.0.5" %}
+{% set version = "1.3.3" %}
 
 package:
   name: delta-sharing-python
@@ -6,17 +6,17 @@ package:
 
 source:
   - folder: dist
-    url: https://pypi.org/packages/source/d/delta-sharing/delta-sharing-{{ version }}.tar.gz
-    sha256: 4141def6951fb0c3350b6c913fd3068b639ed7a978e9f9bc7328b6e25d25cc33
+    url: https://pypi.org/packages/source/d/delta-sharing/delta_sharing-{{ version }}.tar.gz
+    sha256: 7ad03e660d6c4261f015edbbc97a01de9ff16e8c610e6becd672e31730b38e60
   - folder: src
     url: https://github.com/delta-io/delta-sharing/archive/refs/tags/v{{ version }}.tar.gz
-    sha256: abd7806b8a7edd2ce7e58f1a3ba27fd0cd606259f18196ceafe4775bebc48b1e
+    sha256: 81460cc0bce0e4a9ba2360ac3ed357555ab589a1897c87fdcadba65a1d9b0b00
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script:
-    - cd dist 
+    - cd dist
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
 
 requirements:
