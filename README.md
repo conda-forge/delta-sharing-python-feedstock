@@ -1,17 +1,15 @@
-About delta-sharing-python-feedstock
-====================================
+About delta-sharing-feedstock
+=============================
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/delta-sharing-python-feedstock/blob/main/LICENSE.txt)
 
-Home: https://delta.io/sharing
+Home: https://pypi.org/project/delta-sharing
 
 Package license: Apache-2.0
 
 Summary: Python Connector for Delta Sharing
 
 Development: https://github.com/delta-io/delta-sharing
-
-Documentation: https://docs.delta.io/latest/index.html
 
 Current build status
 ====================
@@ -31,53 +29,53 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-delta--sharing--python-green.svg)](https://anaconda.org/conda-forge/delta-sharing-python) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/delta-sharing-python.svg)](https://anaconda.org/conda-forge/delta-sharing-python) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/delta-sharing-python.svg)](https://anaconda.org/conda-forge/delta-sharing-python) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/delta-sharing-python.svg)](https://anaconda.org/conda-forge/delta-sharing-python) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-delta--sharing-green.svg)](https://anaconda.org/conda-forge/delta-sharing) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/delta-sharing.svg)](https://anaconda.org/conda-forge/delta-sharing) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/delta-sharing.svg)](https://anaconda.org/conda-forge/delta-sharing) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/delta-sharing.svg)](https://anaconda.org/conda-forge/delta-sharing) |
 
-Installing delta-sharing-python
-===============================
+Installing delta-sharing
+========================
 
-Installing `delta-sharing-python` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `delta-sharing` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `delta-sharing-python` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `delta-sharing` can be installed with `conda`:
 
 ```
-conda install delta-sharing-python
-```
-
-or with `mamba`:
-
-```
-mamba install delta-sharing-python
-```
-
-It is possible to list all of the versions of `delta-sharing-python` available on your platform with `conda`:
-
-```
-conda search delta-sharing-python --channel conda-forge
+conda install delta-sharing
 ```
 
 or with `mamba`:
 
 ```
-mamba search delta-sharing-python --channel conda-forge
+mamba install delta-sharing
+```
+
+It is possible to list all of the versions of `delta-sharing` available on your platform with `conda`:
+
+```
+conda search delta-sharing --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search delta-sharing --channel conda-forge
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search delta-sharing-python --channel conda-forge
+mamba repoquery search delta-sharing --channel conda-forge
 
-# List packages depending on `delta-sharing-python`:
-mamba repoquery whoneeds delta-sharing-python --channel conda-forge
+# List packages depending on `delta-sharing`:
+mamba repoquery whoneeds delta-sharing --channel conda-forge
 
-# List dependencies of `delta-sharing-python`:
-mamba repoquery depends delta-sharing-python --channel conda-forge
+# List dependencies of `delta-sharing`:
+mamba repoquery depends delta-sharing --channel conda-forge
 ```
 
 
@@ -102,12 +100,12 @@ it is possible to build and upload installable packages to the
 [conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
-To manage the continuous integration and simplify feedstock maintenance
+To manage the continuous integration and simplify feedstock maintenance,
 [conda-smithy](https://github.com/conda-forge/conda-smithy) has been developed.
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
-For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
+For more information, please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
@@ -122,19 +120,19 @@ Terminology
                   produce the finished article (built conda distributions)
 
 
-Updating delta-sharing-python-feedstock
-=======================================
+Updating delta-sharing-feedstock
+================================
 
-If you would like to improve the delta-sharing-python recipe or build a new
+If you would like to improve the delta-sharing recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `conda-forge` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `conda-forge` channel.
-Note that all branches in the conda-forge/delta-sharing-python-feedstock are
+Note that all branches in the conda-forge/delta-sharing-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
-on branches in forks and branches in the main repository should only be used to
+on branches in forks, and branches in the main repository should only be used to
 build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
