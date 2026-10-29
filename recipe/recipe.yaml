@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "1.4.2"
+  version: "1.4.3"
   python_check_max: "3.14"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   - url: https://files.pythonhosted.org/packages/source/d/delta-sharing/delta_sharing-${{ version }}.tar.gz
-    sha256: 4e8d248a547d997ed5c18a92d84ffd361e4dbad47a786fbc0333729a785b8abe
+    sha256: ea1629494dd9e48317ce57c2f6390a43b7a3a19b8ee13abb917fe687d33a545b
   - url: https://raw.githubusercontent.com/delta-io/delta-sharing/refs/tags/py-v${{ version }}/LICENSE.txt
     sha256: 5a2ae634be68464e407b80dbece9d8d822926c9b2cbdb1e801f5d27929589802
 
