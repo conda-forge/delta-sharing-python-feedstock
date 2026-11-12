@@ -2,10 +2,8 @@
 schema_version: 1
 
 context:
-  version: "1.4.3"
-  # update to >=3.15 when pyarrow pin changes
-  #   pyarrow >=16.1.0,<=23.0.1, which cannot be installed
-  python_check_max: "3.14"
+  version: "1.5.0"
+  python_check_max: "3.15"
 
 package:
   name: delta-sharing-python
@@ -13,7 +11,7 @@ package:
 
 source:
   - url: https://files.pythonhosted.org/packages/source/d/delta-sharing/delta_sharing-${{ version }}.tar.gz
-    sha256: ea1629494dd9e48317ce57c2f6390a43b7a3a19b8ee13abb917fe687d33a545b
+    sha256: 3fe43051726a3e2453be55ba277e93e1a22ce492261d3146ca6acddd53e9a0a7
   - url: https://raw.githubusercontent.com/delta-io/delta-sharing/refs/tags/py-v${{ version }}/LICENSE.txt
     sha256: 5a2ae634be68464e407b80dbece9d8d822926c9b2cbdb1e801f5d27929589802
 
@@ -29,16 +27,16 @@ requirements:
     - python ${{ python_min }}.*
     - setuptools >=64
   run:
-    - aiohttp >=3.0.0,<=3.13.4
+    - aiohttp >=3.0.0
     - certifi >=2026.10.19
     - delta-kernel-rust-sharing-wrapper >=0.3.4,<1.0
-    - fsspec >=0.7.4,<=2026.2.0
+    - fsspec >=0.7.4
     - jwcrypto >=1.5.6,<2.0
-    - pandas >=2.0.3,<3.0.0
-    - pyarrow >=16.1.0,<=23.0.1
+    - pandas >=2.0.3,<4.0.0
+    - pyarrow >=16.1.0
     - python >=${{ python_min }}
-    - requests >=2.20.0,<=2.33.0
-    - yarl >=1.6.0,<=1.23.0
+    - requests >=2.20.0
+    - yarl >=1.6.0
 
 tests:
   - package_contents:
