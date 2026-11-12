@@ -3,9 +3,7 @@ schema_version: 1
 
 context:
   version: "1.5.0"
-  # update to >=3.15 when pyarrow pin changes
-  #   pyarrow >=16.1.0,<=23.0.1, which cannot be installed
-  python_check_max: "3.14"
+  python_check_max: "3.15"
 
 package:
   name: delta-sharing-python
@@ -29,16 +27,16 @@ requirements:
     - python ${{ python_min }}.*
     - setuptools >=64
   run:
-    - aiohttp >=3.0.0,<=3.13.4
+    - aiohttp >=3.0.0
     - certifi >=2026.10.19
     - delta-kernel-rust-sharing-wrapper >=0.3.4,<1.0
-    - fsspec >=0.7.4,<=2026.2.0
+    - fsspec >=0.7.4
     - jwcrypto >=1.5.6,<2.0
-    - pandas >=2.0.3,<3.0.0
-    - pyarrow >=16.1.0,<=23.0.1
+    - pandas >=2.0.3,<4.0.0
+    - pyarrow >=16.1.0
     - python >=${{ python_min }}
-    - requests >=2.20.0,<=2.33.0
-    - yarl >=1.6.0,<=1.23.0
+    - requests >=2.20.0
+    - yarl >=1.6.0
 
 tests:
   - package_contents:
